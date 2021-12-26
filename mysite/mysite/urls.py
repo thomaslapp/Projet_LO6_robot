@@ -18,5 +18,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path('formRobot/', include('formRobot.urls')),
+    path('', include('mainMenu.urls')),
     path('admin/', admin.site.urls),
 ]
