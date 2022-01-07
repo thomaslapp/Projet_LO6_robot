@@ -55,7 +55,11 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['formRobot/templates', 'mainMenu/templates', 'gamesPage/templates', 'storyMode/templates'],
+        'DIRS': ['formRobot/templates',
+                 'mainMenu/templates',
+                 'gamesPage/templates',
+                 'storyMode/templates',
+                 'storyOne/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

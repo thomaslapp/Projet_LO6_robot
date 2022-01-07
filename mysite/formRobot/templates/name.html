@@ -1,5 +1,26 @@
-<form action="/your-name/" method="post">
+<form action="/formRobot/execScript/" method="post">
     {% csrf_token %}
-    {{ form }}
+    <textarea tabindex="-1" name="code" cols="150" rows="30" required="" id="id_code">
+import cozmo
+
+def cozmo_program(robot: cozmo.robot.Robot):
+    robot.say_text("Hello World").wait_for_completed()
+
+
+cozmo.run_program(cozmo_program)
+
+    </textarea>
     <input type="submit" value="Submit">
 </form>
+
+<script>
+    document.querySelector('#id_code').addEventListener('keydown', e => {
+        if ( e.key === 'Tab' && !e.shiftKey ) {
+            // execCommand operations are "Cmd|Ctrl+Z"-able
+              // note: execCommand is deprecated and may not work in the future
+            document.execCommand('insertText', false, "\t");
+            e.preventDefault();
+            return false;
+        }
+    });
+</script>
