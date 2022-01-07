@@ -4,9 +4,22 @@ from django.shortcuts import render
 import sys
 from subprocess import run, PIPE
 
+
+from .forms import NameForm
 def get_formRobot(request):
-    return render(request, 'template_formRobot.html')
+    
+    form = NameForm()
+
+    return render(request, 'name.html', {'form': form})
+
 
 def execScript(request):
-    out = run([sys.executable,'C:\\Users\\thoma\\Desktop\\Cours\\LP\\LO6 robot\\GitHub\\Projet_LO6_robot\\mysite\\formRobot\\MYSCRIPT.py'], shell=True,stdout=PIPE)
+    print (request.POST.get('code'))
+    filePath = '.\\MYSCRIPT.py'
+    open(filePath, 'w').close()
+
+    file_object = open(filePath, 'a')
+    file_object.write(request.POST.get('code'));
+    file_object.close();
+    out = run([sys.executable,filePath], shell=True,stdout=PIPE)
     return HttpResponse(out)
