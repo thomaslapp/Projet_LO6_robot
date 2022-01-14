@@ -1,15 +1,6 @@
 <form action="/formRobot/execScript/" method="post">
     {% csrf_token %}
-    <textarea tabindex="-1" name="code" cols="150" rows="30" required="" id="id_code">
-import cozmo
-
-def cozmo_program(robot: cozmo.robot.Robot):
-    robot.say_text("Hello World").wait_for_completed()
-
-
-cozmo.run_program(cozmo_program)
-
-    </textarea>
+    <textarea tabindex="-1" name="code" cols="150" rows="30" required="" id="id_code"></textarea>
     <input type="submit" value="Submit">
 </form>
 

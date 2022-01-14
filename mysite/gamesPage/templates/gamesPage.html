@@ -9,11 +9,15 @@
 </head>
 <body>
 <br>
-<div class="container">
+<div id="containerPenseAUnNombre" class="container">
         <h3>Je pense à un nombre</h3>
-        <a href="https://www.amazon.fr/dp/B074ZP4W41">
             <img src="../../static/media/fakegame_1.jpg">
         </a>
+        <form action="/gamesPage/execScript/" method="post" hidden>
+            {% csrf_token %}
+            <textarea tabindex="-1" name="nomExo" id="nomExo">findNumber</textarea>
+            <input id="btnfindNumber" type="submit" value="Submit">
+        </form>
     </div>
 <br>
 <div class="container">
@@ -24,3 +28,12 @@
 </div>
 </body>
 </html>
+
+<script>
+    let exoPenseAUnNombre = document.getElementById("containerPenseAUnNombre");
+    exoPenseAUnNombre.onclick = function() {
+        document.getElementById("btnfindNumber").click();
+    }
+
+
+</script>

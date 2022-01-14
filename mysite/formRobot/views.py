@@ -4,18 +4,13 @@ from django.shortcuts import render
 import sys
 from subprocess import run, PIPE
 
-
-from .forms import NameForm
 def get_formRobot(request):
-    
-    form = NameForm()
-
-    return render(request, 'name.html', {'form': form})
-
+    return render(request, 'template_formRobot.html')
 
 def execScript(request):
+
     print (request.POST.get('code'))
-    filePath = '.\\MYSCRIPT.py'
+    filePath = '.\\MYSCRIPT.py';
     open(filePath, 'w').close()
 
     file_object = open(filePath, 'a')
