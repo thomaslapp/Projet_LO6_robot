@@ -19,12 +19,9 @@ from django.urls import include, path
 urlpatterns = [
     path('formRobot/', include('formRobot.urls')),
     path('', include('mainMenu.urls')),
-    path('gamesPage', include('gamesPage.urls')),
+    path('gamesPage/', include('gamesPage.urls')),
     path('storyMode/', include('storyMode.urls')),
     path('storyOne', include('storyOne.urls')),
-<<<<<<< HEAD
     path('admin/', admin.site.urls),
-=======
     path('admin', admin.site.urls),
->>>>>>> 02192d8d85f560a921519d70e0c2b4ed94ec2eb5
 ]
