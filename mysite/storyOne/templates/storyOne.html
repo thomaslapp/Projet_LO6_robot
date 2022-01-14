@@ -2,74 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Histoire 1</title>
+    <title>Les J.O. d'Hiver</title>
     <link rel="stylesheet" href="../../static/css/storyOne.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
 <br>
-<div>
-   <h1>Histoire 1</h1>
-</div>
-<div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="../../static/media/cozmo_1.jpg" alt="Premier exercice">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Exercice 1</h5>
-                    <p>Se familiariser avec le robot. Déplacement basique, déplacement jusqu'à un cube.
-                        -Faites le avancer d’une distance n, faire un demi tour et revenir au point de départ.
-                        -Faites le avancer d’une distance n, faire un grand virage vers la droite ou la gauche, jusqu'à revenir au point de départ.
-                        -Faites en sorte que Toto puisse se déplacer en direction d’un cube, attention à ce qu’il ne fasse pas d’accident tout de même !
-                    </p>
-                </div>
+<h1 style="align-content: center; text-align: center; color: cornflowerblue;">Les J.O. d'Hiver</h1>
+<br>
+<p class="lead" style="text-align: center !important; align-items: center !important; margin-left: 5%; margin-right: 5%;">
+    <strong>Toto le robot est la toute nouvelle mascotte</strong> des Jeux Olympiques d'Hiver de Pékin.
+    <br>Toutes les épreuves se déroulaient bien, jusqu'à ce que les organisateurs se rendent compte qu'ils avaient <strong>oublié le podium</strong>...
+    <br>Comment va-t-on faire ? Comment savoir qui aura gagné la <strong>première place</strong> ?
+    <br><br>Malheureusement tous les engins de chantier sont à des kilomètres, la première épreuve se termine dans quelques dizaines de minutes…
+    <br>Seul un petit <strong>robot serait assez fort pour porter ses blocs</strong>, <strong>construire un podium</strong> et <strong>célébrer la performance des athlètes</strong>.
+    <br><br><strong>Aide-le à retrouver tout les blocs</strong> et à <strong>construire le podium en les plaçant dans le bon ordre</strong> :
+    <br>• 1er en haut : Jaune
+    <br>• 2ème en bas à gauche : Bleu
+    <br>• 3ème en bas à droite : Rouge
+    <br><br><strong>Fais vite avant que la dernière épreuve ne se termine</strong> !
+    <br>Et bonne chance ! 🙏
+
+</p>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="../../static/media/fakegame_4_resized.jpg" alt="Premier exercice">
+            <div class="carousel-caption d-none d-md-block" style="top: 60%; transform: translateY(-60%); background-color: white; box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05); opacity: 0.88;">
+                <h4 style="color: black">Exercice 1</h4>
+                <p style="color: black">Se familiariser avec le robot. Déplacement basique, déplacement jusqu'à un cube.
+                    <br><br>• Faites le avancer d’une distance n, faire un demi tour et revenir au point de départ.
+                    <br>• Faites le avancer d’une distance n, faire un grand virage vers la droite ou la gauche, jusqu'à revenir au point de départ.
+                    <br>• Faites en sorte que Toto puisse se déplacer en direction d’un cube, attention à ce qu’il ne fasse pas d’accident tout de même !
+                    <br>
+                </p>
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="../../static/media/fakegame_1.jpg" alt="Deuxieme exercice">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Exercice 2</h5>
-                    <p>Paramétrer les couleurs sur les différents cubes, configurer Cozmo pour les reconnaître.
-                        -Faites s’allumer les différents cubes dans les trois couleurs du podium.
-                        -Positionner les différents cubes de couleurs autour de lui, faites en sorte qu’il reconnaisse la couleur de l’un d’eux (la couleur de votre choix) et qu’il se tourne vers lui.
-                    </p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="../../static/media/fakegame_2.jpg" alt="Troisieme exercice">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Exercice 3</h5>
-                    <p>Combinaison des exercices, former un podium (style pyramide de cube), avec les couleurs et l'ordre donné.
-                        C’est le moment de construire, il ne vous reste plus beaucoup de temps !
-                        -Toto doit utiliser ses nouvelles connaissances (grâce à vous) et construire le podium, attention à respecter l’ordre des couleurs donné plus tôt.
-                    </p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="../../static/media/fakegame_2.jpg" alt="Quatrième exercice">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Exercice 4</h5>
-                    <p>Célébrer la victoire des athlètes avec un petit discours..
-                        -Toto doit féliciter les différents athlètes. Faites-le se positionner devant chacun d’eux et dire quelques mots de félicitations en fonction de leurs médailles (Or, Argent, Bronze).
-                    </p>
-                </div>
+            <div class="carousel-caption d-none d-md-block" style="top: 60%; transform: translateY(-60%); background-color: white; box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05); opacity: 0.88;">
+                <form action="/storyOne/execScript/" method="post">
+                    <textarea tabindex="-1" name="code" cols="50" rows="10" required="" id="id_code" style="top: 60%; transform: translateY(-60%);"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://placeimg.com/1080/500/arch" alt="Deuxième exercice">
+            <div class="carousel-caption d-none d-md-block" style="top: 60%; transform: translateY(-60%); background-color: white; box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05); opacity: 0.88;">
+                <h4 style="color: black">Exercice 2</h4>
+                <p style="color: black">Paramétrer les couleurs sur les différents cubes, configurer Cozmo pour les reconnaître.
+                    <br><br>• Faites s’allumer les différents cubes dans les trois couleurs du podium.
+                    <br>• Positionner les différents cubes de couleurs autour de lui, faites en sorte qu’il reconnaisse la couleur de l’un d’eux (la couleur de votre choix) et qu’il se tourne vers lui.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://placeimg.com/1080/500/nature" alt="Troisième exercice">
+            <div class="carousel-caption d-none d-md-block" style="top: 60%; transform: translateY(-60%); background-color: white; box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05); opacity: 0.88;">
+                <h4 style="color: black">Exercice 3</h4>
+                <p style="color: black">Combinaison des exercices, former un podium (style pyramide de cube), avec les couleurs et l'ordre donné.
+                    <br><br>• C’est le moment de construire, il ne vous reste plus beaucoup de temps !
+                    <br>• Toto doit utiliser ses nouvelles connaissances (grâce à vous) et construire le podium, attention à respecter l’ordre des couleurs donné plus tôt.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://placeimg.com/1080/500/nature" alt="Quatrième exercice">
+            <div class="carousel-caption d-none d-md-block" style="top: 60%; transform: translateY(-60%); background-color: white; box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05); opacity: 0.88;">
+                <h4 style="color: black">Exercice 4</h4>
+                <p style="color: black">Célébrer la victoire des athlètes avec un petit discours...
+                    <br><br>• Toto doit féliciter les différents athlètes.
+                    <br>• Faites-le se positionner devant chacun d’eux et dire quelques mots de félicitations en fonction de leurs médailles (Or, Argent, Bronze).</p>
+            </div>
+        </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
 </body>
 </html>
