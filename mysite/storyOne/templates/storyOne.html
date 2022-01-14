@@ -11,6 +11,34 @@
 </head>
 <body>
 <br>
+<<<<<<< HEAD
+<div>
+   <h1>Histoire 1</h1>
+</div>
+<div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="../../static/media/cozmo_1.jpg" alt="Premier exercice">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Exercice 1</h5>
+                    <p>Se familiariser avec le robot. Déplacement basique, déplacement jusqu'à un cube.
+                        -Faites le avancer d’une distance n, faire un demi tour et revenir au point de départ.
+                        -Faites le avancer d’une distance n, faire un grand virage vers la droite ou la gauche, jusqu'à revenir au point de départ.
+                        -Faites en sorte que Toto puisse se déplacer en direction d’un cube, attention à ce qu’il ne fasse pas d’accident tout de même !
+                    </p>
+                    <form action="/formRobot/execScript/" method="post">
+                        {% csrf_token %}
+                        <textarea tabindex="-1" name="code" cols="150" rows="30" required="" id="id_code"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+=======
 <h1 style="align-content: center; text-align: center; color: cornflowerblue;">Les J.O. d'Hiver</h1>
 <br>
 <p class="lead" style="text-align: center !important; align-items: center !important; margin-left: 5%; margin-right: 5%;">
@@ -49,6 +77,7 @@
                     <textarea tabindex="-1" name="code" cols="50" rows="10" required="" id="id_code" style="top: 60%; transform: translateY(-60%);"></textarea>
                     <input type="submit" value="Submit">
                 </form>
+>>>>>>> 4e5892fd540aa5105c74f06d716546250b5d64dd
             </div>
         </div>
         <div class="carousel-item">

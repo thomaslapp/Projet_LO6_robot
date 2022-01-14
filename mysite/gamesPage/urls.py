@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.page_jeux, name='page_jeux'),
+    path('execScript/', views.execScript),
 ]
