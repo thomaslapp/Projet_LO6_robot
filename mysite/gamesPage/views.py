@@ -14,4 +14,4 @@ def execScript(request):
     filePath = '.\\gamesPage\\jeux\\' + request.POST.get('nomExo') + ".py"
     print(filePath)
     out = run([sys.executable,filePath], shell=True,stdout=PIPE)
-    ##return HttpResponse(out)
+    return HttpResponse(out)

@@ -12,7 +12,6 @@
 <div id="containerPenseAUnNombre" class="container">
         <h3>Je pense à un nombre</h3>
             <img src="../../static/media/fakegame_1.jpg">
-        </a>
         <form action="/gamesPage/execScript/" method="post" hidden>
             {% csrf_token %}
             <textarea tabindex="-1" name="nomExo" id="nomExo">findNumber</textarea>
@@ -20,19 +19,27 @@
         </form>
     </div>
 <br>
-<div class="container">
+<div id="containerquestion_v3_avecVocal" class="container">
         <h3>Questionnaire</h3>
-        <a href="https://www.fnac.com/Anki-Cozmo-5-choses-a-savoir-sur-le-robot-le-plus-cool-du-monde/cp37278/w-4">
             <img src="../../static/media/fakegame_2.jpg">
-        </a>
+        <form action="/gamesPage/execScript/" method="post" hidden>
+            {% csrf_token %}
+            <textarea tabindex="-1" name="nomExo" id="nomExo">question_v3_avecVocal</textarea>
+            <input id="btnquestion_v3_avecVocal" type="submit" value="Submit">
+        </form>
 </div>
 </body>
 </html>
 
 <script>
     let exoPenseAUnNombre = document.getElementById("containerPenseAUnNombre");
+    console.log("azeaez")
     exoPenseAUnNombre.onclick = function() {
         document.getElementById("btnfindNumber").click();
+    }
+    let exoquestion_v3_avecVocal = document.getElementById("containerquestion_v3_avecVocal");
+    exoquestion_v3_avecVocal.onclick = function() {
+        document.getElementById("btnquestion_v3_avecVocal").click();
     }
 
 
