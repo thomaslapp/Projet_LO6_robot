@@ -11,7 +11,7 @@ def page_jeux(request):
     return render(request, 'gamesPage.html')
 
 def execScript(request):
-    filePath = '.\\gamesPage\\jeux\\' + request.POST.get('nomExo') + ".py"
+    filePath = './gamesPage/jeux/' + request.POST.get('nomExo') + '.py'
     print(filePath)
     saveout = sys.stdout
     fsock = open('out.log', 'w')
