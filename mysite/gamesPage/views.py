@@ -13,5 +13,15 @@ def page_jeux(request):
 def execScript(request):
     filePath = '.\\gamesPage\\jeux\\' + request.POST.get('nomExo') + ".py"
     print(filePath)
-    out = run([sys.executable,filePath], shell=True,stdout=PIPE)
-    return HttpResponse(out)
+    saveout = sys.stdout
+    fsock = open('out.log', 'w')
+    sys.stdout = fsock
+    exec(open(filePath).read())
+    sys.stdout = saveout
+    fsock.close()
+    fsockR = open('out.log', 'r')
+    text = fsockR.read()
+    fsockR.close()
+    return render(request, 'gamesPage.html', {'logs':text})
+    ##out = run([sys.executable,filePath], shell=True,stdout=PIPE)
+    ##return HttpResponse(out)

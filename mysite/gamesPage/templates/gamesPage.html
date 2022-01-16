@@ -9,6 +9,11 @@
 </head>
 <body>
 <br>
+{% if logs %}
+    <p>
+        {{logs}} 
+    </p>
+{% endif %}
 <div id="containerPenseAUnNombre" class="container">
         <h3>Je pense à un nombre</h3>
             <img src="../../static/media/fakegame_1.jpg">
@@ -33,7 +38,6 @@
 
 <script>
     let exoPenseAUnNombre = document.getElementById("containerPenseAUnNombre");
-    console.log("azeaez")
     exoPenseAUnNombre.onclick = function() {
         document.getElementById("btnfindNumber").click();
     }
