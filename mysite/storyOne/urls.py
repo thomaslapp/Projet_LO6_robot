@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.histoire_un, name='histoire_un'),
-    path('execScript/', views.execScript),
+    path('storyOne/execScript/', views.execScript),
 ]
