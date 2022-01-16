@@ -19,7 +19,10 @@ def execScript(request):
     saveout = sys.stdout
     fsock = open('out.log', 'w')
     sys.stdout = fsock
-    exec(open(filePath).read())
+    try:
+        exec(open(filePath).read())
+    except Exception as error:
+        print(error)
     sys.stdout = saveout
     fsock.close()
     fsockR = open('out.log', 'r')
