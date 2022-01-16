@@ -16,5 +16,17 @@ def execScript(request):
     file_object = open(filePath, 'a')
     file_object.write(request.POST.get('code'));
     file_object.close();
-    out = run([sys.executable,filePath], shell=True,stdout=PIPE)
-    return HttpResponse(out)
+
+    saveout = sys.stdout
+    fsock = open('out.log', 'w')
+    sys.stdout = fsock
+    exec(open(filePath).read())
+    sys.stdout = saveout
+    fsock.close()
+    fsockR = open('out.log', 'r')
+    text = fsockR.read();
+    fsockR.close();
+    return render(request, 'template_formRobot.html', {'logs':text})
+
+    ##out = run([sys.executable,filePath], shell=True,stdout=PIPE)
+    ##return HttpResponse("")

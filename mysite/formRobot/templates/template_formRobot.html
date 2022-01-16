@@ -5,6 +5,12 @@
     <textarea tabindex="-1" name="code" cols="150" rows="30" required="" id="id_code"></textarea>
     <input type="submit" value="Submit">
 </form>
+{% if logs %}
+    <p>
+        {{logs}} 
+    </p>
+{% endif %}
+
 
 <script>
     document.querySelector('#id_code').addEventListener('keydown', e => {

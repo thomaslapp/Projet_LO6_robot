@@ -24,7 +24,7 @@
             <img src="../../static/media/fakegame_2.jpg">
         <form action="/gamesPage/execScript/" method="post" hidden>
             {% csrf_token %}
-            <textarea tabindex="-1" name="nomExo" id="nomExo">question_v3_avecVocal</textarea>
+            <textarea tabindex="-1" name="nomExo" id="nomExo">question_v2_sansVocal</textarea>
             <input id="btnquestion_v3_avecVocal" type="submit" value="Submit">
         </form>
 </div>
@@ -39,6 +39,7 @@
     }
     let exoquestion_v3_avecVocal = document.getElementById("containerquestion_v3_avecVocal");
     exoquestion_v3_avecVocal.onclick = function() {
+        console.log("aezr")
         document.getElementById("btnquestion_v3_avecVocal").click();
     }
 
