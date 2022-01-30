@@ -9,7 +9,7 @@ global aRepondu
 global cube
 
 global con
-con = sl.connect('./BDD.db')
+con = sl.connect('../bdd/BDD.db')
 
 def cozmo_program(robot: cozmo.robot.Robot):
 

@@ -15,7 +15,7 @@ global aRepondu
 global cube
 
 global con
-con = sl.connect('./BDD.db')
+con = sl.connect('../bdd/BDD.db')
 
 ###Biblioteque pour le vocal : pyaudio, SpeechRecognition(je crois que)
 ###pyaudio : https://pypi.org/project/PyAudio/
