@@ -7,9 +7,10 @@ from subprocess import run, PIPE
 def get_formRobot(request):
     return render(request, 'template_formRobot.html')
 
+
 def execScript(request):
 
-    print (request.POST.get('code'))
+    #print (request.POST.get('code'))
     filePath = '.\\MYSCRIPT.py';
     open(filePath, 'w').close()
 
@@ -20,15 +21,27 @@ def execScript(request):
     saveout = sys.stdout
     fsock = open('out.log', 'w')
     sys.stdout = fsock
-    try:
+    erreur = ""
+    with open("interface/scriptRobots/BaseQuestion.py") as programToExecute:
+        try:
+            exec(programToExecute.read())
+        except Exception as error:
+            erreur = error
+    """
+    try:    
         exec(open(filePath).read())
     except Exception as error:
-        print(error)
+        erreur = error
+    """
+    
     sys.stdout = saveout
     fsock.close()
     fsockR = open('out.log', 'r')
-    text = fsockR.read();
-    fsockR.close();
+    text = "Sortie standard : " + fsockR.read()
+    if erreur == "":
+        text = text + "\n Erreur message : " + erreur
+    
+    fsockR.close()
     return render(request, 'template_formRobot.html', {'logs':text})
 
     ##out = run([sys.executable,filePath], shell=True,stdout=PIPE)

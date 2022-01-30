@@ -3,11 +3,15 @@
 <form action="/formRobot/execScript/" method="post">
     {% csrf_token %}
     <textarea tabindex="-1" name="code" cols="150" rows="30" required="" id="id_code"></textarea>
-    <input type="submit" value="Submit">
+    <br/>
+    <br/>
+    <input type="submit" value="Submit" style="height:50px; width:100px">
 </form>
+<br/>
+
 {% if logs %}
     <p>
-        {{logs}} 
+        {{logs}}
     </p>
 {% endif %}
 
