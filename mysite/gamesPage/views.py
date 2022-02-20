@@ -16,16 +16,17 @@ def execScript(request):
     saveout = sys.stdout
     fsock = open('out.log', 'w')
     sys.stdout = fsock
+    erreur = ""
     try:
         exec(open(filePath).read())
     except Exception as error:
-        print(error)
+        erreur = "Sortie erreur : " + str(error)
     
     sys.stdout = saveout
     fsock.close()
     fsockR = open('out.log', 'r')
-    text = fsockR.read()
+    text = "Sortie standard : " + fsockR.read()
     fsockR.close()
-    return render(request, 'gamesPage.html', {'logs':text})
+    return render(request, 'gamesPage.html', {'logs':text, 'error':erreur})
     ##out = run([sys.executable,filePath], shell=True,stdout=PIPE)
     ##return HttpResponse(out)

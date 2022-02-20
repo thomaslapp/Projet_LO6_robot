@@ -14,7 +14,11 @@
         {{logs}}
     </p>
 {% endif %}
-
+{% if error %}
+    <p>
+        {{error}}
+    </p>
+{% endif %}
 
 <script>
     document.querySelector('#id_code').addEventListener('keydown', e => {
@@ -26,3 +30,4 @@
             return false;
         }
     });
+</script>

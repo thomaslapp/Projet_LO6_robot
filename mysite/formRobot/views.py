@@ -22,6 +22,7 @@ def execScript(request):
     fsock = open('out.log', 'w')
     sys.stdout = fsock
     erreur = ""
+    """
     with open("interface/scriptRobots/BaseQuestion.py") as programToExecute:
         try:
             exec(programToExecute.read())
@@ -31,18 +32,16 @@ def execScript(request):
     try:    
         exec(open(filePath).read())
     except Exception as error:
-        erreur = error
-    """
+        erreur = "Sortie erreur : " + str(error)
+    
     
     sys.stdout = saveout
     fsock.close()
     fsockR = open('out.log', 'r')
     text = "Sortie standard : " + fsockR.read()
-    if erreur == "":
-        text = text + "\n Erreur message : " + erreur
-    
+
     fsockR.close()
-    return render(request, 'template_formRobot.html', {'logs':text})
+    return render(request, 'template_formRobot.html', {'logs':text, 'error':erreur})
 
     ##out = run([sys.executable,filePath], shell=True,stdout=PIPE)
     ##return HttpResponse("")
